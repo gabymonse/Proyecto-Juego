@@ -6,21 +6,37 @@ accion = ["bajar", "BAJAR", "subir", "SUBIR"]
 
 #piso_actual = input("¿donde estas? ")
 
-def piso(x):
+class Ascensor():
+    def __init__(self,x):
+        self.x = x
 
-    
-    if x in pisos:
-        if x in subir:
-            input("¿a que piso quieres bajar? ")
-            
+    def piso(self,x):
+        
+
+        if self.x in pisos:
+           if self.x in subir:
+              self.s=  input("¿a que piso quieres bajar? ")
+           
           
-        if x in bajar:
-            input("¿a que piso quieres subir? ")
+           if self.x in bajar:
+              self.b = input("¿a que piso quieres subir? ")
             
-        if x in bajar and x in subir:
-            input ("¿quieres bajar o subir? ")
+           if self.x in bajar and x in subir:
+              self.sb=input ("¿quieres bajar o subir? ")
             
 
+    def final(self):
+        
+        if self.x in subir:
+             print("bajando...")
+             print("piso ", self.s)
+        if self.x in  bajar:
+             print("subiendo...")
+             print("piso ", self.b)
+        if self.x in bajar and self.x in subir:
+             print(" aja ", self.sb)
+            
+    
     #f x in alto:
        # return "bajando..."
     #if x in bajo:
@@ -36,5 +52,6 @@ def piso(x):
          #if a_donde == pisos[2]:
           #     return "puedes bajar a ", bajar
 
-print(piso(3))
+#print(Ascensor.piso(3))
+print(Ascensor.final(3))
 
