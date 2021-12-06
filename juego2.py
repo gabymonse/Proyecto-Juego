@@ -1,7 +1,7 @@
-pisos = [1, 2, 3]
-bajar = [1, 2]
-subir = [2, 3]
-accion = ["bajar", "BAJAR", "subir", "SUBIR"]
+#pisos = [1, 2, 3]
+#bajar = [1, 2]
+#subir = [2, 3]
+#accion = ["bajar", "BAJAR", "subir", "SUBIR"]
 
 class Ascensor():
 
@@ -10,23 +10,29 @@ class Ascensor():
         self.s = 0
         self.b = 0
         self.sb = 0
-
-    def piso(self,x, s,b,sb):
-        self.x = x
-        self.s = s
-        self.b = b
-        self.sb = sb
+        self.pisos = [1, 2, 3]
+        self.bajar = [1, 2]
+        self.subir = [2, 3]  
         
-        if self.x in pisos:
-            if self.x in subir:
-                self.s
-            if self.x in bajar:
-                self.b
-            if self.x in subir and self.x in bajar:
-                self.sb
+    def piso(self):
+        self.x = input("en que pisos estas? ")
+        #self.s = input("¿a que piso quieres bajar?  ")
+        #self.b = input("¿a que piso quieres subir? ")
+        #self.sb = input("¿quieres bajar o subir?  ")
+       
+        #print(self.x)
+        if self.x in self.pisos:
+            if self.x in self.subir:
+                self.s = input("¿a que piso quieres bajar?  ")
+            if self.x in self.bajar:
+                self.b = input("¿a que piso quieres subir? ")
+            if self.x in self.subir and self.x in self.bajar:
+                self.sb = input("¿quieres bajar o subir?  ")
 
-uno= input("en que pisos estas? ")
-dos = input("¿a que piso quieres bajar?  ")
-tres = input("¿a que piso quieres subir? ")
-cuatro = input("¿quieres bajar o subir?  ")
-print(Ascensor.piso( uno, dos, tres, cuatro))  
+#uno= input("en que pisos estas? ")
+#dos = input("¿a que piso quieres bajar?  ")
+#tres = input("¿a que piso quieres subir? ")
+#cuatro = input("¿quieres bajar o subir?  ")
+
+elevador = Ascensor()
+elevador.piso()
